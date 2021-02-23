@@ -13,6 +13,9 @@ object Application {
         val result = Introduction.findMiddleIndex(temp)
         println(result)
 
+        val searchResult = Introduction.searchInsert(intArrayOf(1, 3, 5, 6),5)
+        println(searchResult)
+
         val intervals = arrayOf(intArrayOf(1,3), intArrayOf(2,6), intArrayOf(8,10), intArrayOf(15,18))
         val mergerResult = Introduction.mergeArray(intervals)
         mergerResult.forEach {
