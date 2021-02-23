@@ -11,6 +11,13 @@ object Application {
     fun main(args: Array<String>) {
         val temp = intArrayOf(-1, -1, -1, -1, -1, 0)
         val result = Introduction.findMiddleIndex(temp)
-        print(result)
+        println(result)
+
+        val intervals = arrayOf(intArrayOf(1,3), intArrayOf(2,6), intArrayOf(8,10), intArrayOf(15,18))
+        val mergerResult = Introduction.mergeArray(intervals)
+        mergerResult.forEach {
+            println("intArray：[${it[0]},${it[1]}]")
+        }
+
     }
 }
