@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/leetcode" />
+            <option value="$PROJECT_DIR$/problemset" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

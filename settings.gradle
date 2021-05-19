@@ -1,3 +1,4 @@
+include ':problemset'
 include ':leetcode'
 include ':app'
 rootProject.name = "leetcode"
