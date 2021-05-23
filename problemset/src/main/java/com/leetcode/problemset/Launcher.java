@@ -16,6 +16,8 @@ public class Launcher {
         print(new _3_无重复字符的最长子串().lengthOfLongestSubstring("aab"));
 
         print(new _4_寻找两个正序数组的中位数().findMedianSortedArrays(new int[]{1,3},new int[]{2,4}));
+
+        print(new _5_最长回文子串().longestPalindrome("abba"));
     }
 
     private static <T> void print(T t) {
