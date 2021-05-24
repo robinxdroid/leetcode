@@ -1,10 +1,8 @@
 package com.leetcode.problemset;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
+ *
  * <p>
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof
