@@ -18,6 +18,8 @@ public class Launcher {
         print(new _4_寻找两个正序数组的中位数().findMedianSortedArrays(new int[]{1,3},new int[]{2,4}));
 
         print(new _5_最长回文子串().longestPalindrome("abba"));
+
+        print(new 剑指Offer_05_替换空格().replaceSpace2("We are happy."));
     }
 
     private static <T> void print(T t) {
