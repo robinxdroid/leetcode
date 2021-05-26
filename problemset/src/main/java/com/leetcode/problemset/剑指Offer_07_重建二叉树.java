@@ -1,5 +1,9 @@
 package com.leetcode.problemset;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
  * 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
  *
@@ -22,42 +26,50 @@ public class 剑指Offer_07_重建二叉树 {
      * }
      */
     public TreeNode buildTree(int[] preorder, int[] inorder) {
-        /*int rootIndex = 0;
-        int rootValue = preorder[rootIndex];
-        TreeNode rootNode = new TreeNode(rootValue);
-        TreeNode point = rootNode;
+        return buildTree(preorder, inorder, 0, preorder.length - 1, 0, inorder.length - 1);
+    }
 
-        int next = preorder[rootIndex + 1];
-
-        int index = binarySearch(inorder, rootValue);
-        int inorderPreValue = inorder[index - 1];
-
-        if (inorderPreValue == next) {
-            point.left = new TreeNode(inorderPreValue);
-            point.right =
+    public TreeNode buildTree(int[] preorder, int[] inorder, int preorderLeft, int preorderRight, int inorderLeft, int inorderRight) {
+        if (preorderLeft > preorderRight) {
+            return null;
         }
 
-        return*/
+        // 前序遍历中的第一个节点就是根节点
+        int preorderRoot = preorderLeft;
+        // 在中序遍历中定位根节点
+        int intorderRoot = search(inorder, preorder[preorderRoot]);
 
-        return null;
+        TreeNode rootNode = new TreeNode(preorder[preorderRoot]);
+
+        // 得到左子树中的节点数目
+        int sizeLeftSubtree = intorderRoot - inorderLeft;
+        // 递归地构造左子树，并连接到根节点
+        // 先序遍历中「从 左边界+1 开始的 sizeLeftSubtree」个元素就对应了中序遍历中「从 左边界 开始到 根节点定位-1」的元素
+        rootNode.left = buildTree(preorder, inorder,
+                preorderRoot + 1,
+                preorderRoot + sizeLeftSubtree,
+                inorderLeft,
+                intorderRoot - 1);
+        // 递归地构造右子树，并连接到根节点
+        // 先序遍历中「从 左边界+1+左子树节点数目 开始到 右边界」的元素就对应了中序遍历中「从 根节点定位+1 到 右边界」的元素
+
+        rootNode.right = buildTree(preorder, inorder,
+                preorderRoot + 1 + sizeLeftSubtree,
+                preorderRight,
+                intorderRoot + 1,
+                inorderRight);
+        return rootNode;
 
     }
 
-    int binarySearch(int[] array, int target) {
-        int start = 0;
-        int end = array.length - 1;
-        while (start <= end) {
-            int mid = start + end / 2;
-            if (target == array[mid]) {
-                return mid;
-            }
+    HashMap<Integer, Integer> map = new HashMap<>();
 
-            if (target > mid) {
-                start = mid + 1;
-            } else if (target < mid) {
-                end = mid - 1;
+    int search(int[] array, int v) {
+        for (int i = 0; i < array.length; i++) {
+            if (!map.containsKey(array[i])) {
+                map.put(array[i], i);
             }
         }
-        return -1;
+        return map.get(v);
     }
 }

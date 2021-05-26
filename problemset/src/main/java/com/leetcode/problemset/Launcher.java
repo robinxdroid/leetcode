@@ -1,5 +1,7 @@
 package com.leetcode.problemset;
 
+import com.leetcode.problemset.printer.BinaryTrees;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,11 +17,13 @@ public class Launcher {
 
         print(new _3_无重复字符的最长子串().lengthOfLongestSubstring("aab"));
 
-        print(new _4_寻找两个正序数组的中位数().findMedianSortedArrays(new int[]{1,3},new int[]{2,4}));
+        print(new _4_寻找两个正序数组的中位数().findMedianSortedArrays(new int[]{1, 3}, new int[]{2, 4}));
 
         print(new _5_最长回文子串().longestPalindrome("abba"));
 
         print(new 剑指Offer_05_替换空格().replaceSpace2("We are happy."));
+
+        print(new 剑指Offer_07_重建二叉树().buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7}));
     }
 
     private static <T> void print(T t) {
@@ -45,6 +49,8 @@ public class Launcher {
                 System.out.print(o + " ");
             }
             System.out.println("");
+        } else if (t instanceof TreeNode) {
+            BinaryTrees.println(new TreeNodeWrapper((TreeNode) t));
         } else {
             System.out.println(t);
         }
