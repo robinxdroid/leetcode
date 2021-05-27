@@ -24,6 +24,18 @@ public class Launcher {
         print(new 剑指Offer_05_替换空格().replaceSpace2("We are happy."));
 
         print(new 剑指Offer_07_重建二叉树().buildTree(new int[]{3, 9, 20, 15, 7}, new int[]{9, 3, 15, 20, 7}));
+
+        剑指Offer_09_用两个栈实现队列.CQueue cQueue = new 剑指Offer_09_用两个栈实现队列.CQueue();
+        cQueue.appendTail(20);
+        cQueue.appendTail(30);
+        cQueue.appendTail(40);
+        cQueue.appendTail(50);
+        cQueue.appendTail(60);
+        print(cQueue.deleteHead());
+        print(cQueue.deleteHead());
+        print(cQueue.deleteHead());
+        print(cQueue.deleteHead());
+        print(cQueue.deleteHead());
     }
 
     private static <T> void print(T t) {
