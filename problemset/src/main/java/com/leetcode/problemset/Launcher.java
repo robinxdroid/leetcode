@@ -37,7 +37,10 @@ public class Launcher {
         print(cQueue.deleteHead());
         print(cQueue.deleteHead());
 
-        print(new 剑指Offer_03_数组中重复的数字().findRepeatNumber(new int[]{1,2,3,4,2,5,6,3}));
+        print(new 剑指Offer_03_数组中重复的数字().findRepeatNumber(new int[]{1, 2, 3, 4, 2, 5, 6, 3}));
+
+        print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{3, 4, 5, 6, 1, 2}));
+        print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
     }
 
     private static <T> void print(T t) {
