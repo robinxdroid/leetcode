@@ -36,7 +36,7 @@ public class 剑指Offer_12_矩阵中的路径 {
      * @param k
      * @return
      */
-    boolean dfs(char[][] board, char[] word, int i, int j, int k) {
+    private boolean dfs(char[][] board, char[] word, int i, int j, int k) {
         if (i >= board.length ||
                 i < 0 ||
                 j >= board[0].length ||
