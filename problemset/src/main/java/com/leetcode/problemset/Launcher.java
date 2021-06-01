@@ -43,6 +43,8 @@ public class Launcher {
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
 
         print(new 剑指Offer_12_矩阵中的路径().exist(new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }}, "ABCCED"));
+
+        print(new 剑指Offer_15_二进制中1的个数().hammingWeight(9));
     }
 
     private static <T> void print(T t) {
