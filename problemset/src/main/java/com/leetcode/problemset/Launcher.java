@@ -45,6 +45,8 @@ public class Launcher {
         print(new 剑指Offer_12_矩阵中的路径().exist(new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }}, "ABCCED"));
 
         print(new 剑指Offer_15_二进制中1的个数().hammingWeight(9));
+
+        print(new 剑指Offer_17_打印从1到最大的n位数().printNumbers(3));
     }
 
     private static <T> void print(T t) {
