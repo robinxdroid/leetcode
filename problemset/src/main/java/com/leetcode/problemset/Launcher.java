@@ -47,6 +47,9 @@ public class Launcher {
         print(new 剑指Offer_15_二进制中1的个数().hammingWeight(9));
 
         print(new 剑指Offer_17_打印从1到最大的n位数().printNumbers(3));
+
+        ListNode head = new ListNode(5, new ListNode(3, new ListNode(7, new ListNode(8, null))));
+        print(new 剑指Offer_18_删除链表的节点().deleteNode(head, 8));
     }
 
     private static <T> void print(T t) {
