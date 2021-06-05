@@ -42,7 +42,9 @@ public class Launcher {
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{3, 4, 5, 6, 1, 2}));
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
 
-        print(new 剑指Offer_12_矩阵中的路径().exist(new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }}, "ABCCED"));
+        char[][] chars = new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }};
+        String word = "ABCCED";
+        print(new 剑指Offer_12_矩阵中的路径().exist(chars, word));
 
         print(new 剑指Offer_15_二进制中1的个数().hammingWeight(9));
 
@@ -50,6 +52,8 @@ public class Launcher {
 
         ListNode head = new ListNode(5, new ListNode(3, new ListNode(7, new ListNode(8, null))));
         print(new 剑指Offer_18_删除链表的节点().deleteNode(head, 8));
+
+        print(new 剑指Offer_21_调整数组顺序使奇数位于偶数前面().exchange2(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
     }
 
     private static <T> void print(T t) {
