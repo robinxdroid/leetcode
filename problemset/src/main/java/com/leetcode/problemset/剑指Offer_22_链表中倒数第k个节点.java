@@ -31,6 +31,7 @@ public class 剑指Offer_22_链表中倒数第k个节点 {
 
     /**
      * 快慢指针
+     *
      * @param head
      * @param k
      * @return
@@ -39,7 +40,7 @@ public class 剑指Offer_22_链表中倒数第k个节点 {
         ListNode fast = head;
         ListNode low = head;
         int n = 0;
-        while(fast != null) {
+        while (fast != null) {
             fast = fast.next;
             if (n >= k) {
                 low = low.next;
@@ -47,21 +48,5 @@ public class 剑指Offer_22_链表中倒数第k个节点 {
             n++;
         }
         return low;
-    }
-
-    private ListNode reversListNode(ListNode head) {
-        ListNode point = head;
-        ListNode prePoint = null;
-        while (point != null) {
-            // 先取出下一个节点暂存
-            ListNode next = point.next;
-            // 改变当前节点的下一个节点指向为前一个节点
-            point.next = prePoint;
-            // 改变前一个节点指向当前节点
-            prePoint = point;
-            // 改变当前节点指向为下一个节点
-            point = next;
-        }
-        return prePoint;
     }
 }

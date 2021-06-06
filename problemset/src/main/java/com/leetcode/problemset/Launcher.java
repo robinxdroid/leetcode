@@ -50,12 +50,13 @@ public class Launcher {
 
         print(new 剑指Offer_17_打印从1到最大的n位数().printNumbers(3));
 
-        ListNode head = new ListNode(5, new ListNode(3, new ListNode(7, new ListNode(8, null))));
-        print(new 剑指Offer_18_删除链表的节点().deleteNode(head, 8));
+        print(new 剑指Offer_18_删除链表的节点().deleteNode(Utils.arrayToListNode(5, 3, 7, 8), 8));
 
         print(new 剑指Offer_21_调整数组顺序使奇数位于偶数前面().exchange2(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
 
         print(new 剑指Offer_22_链表中倒数第k个节点().getKthFromEnd2(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 3));
+
+        print(new 剑指Offer_24_反转链表().reverseList(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
     }
 
     private static <T> void print(T t) {
