@@ -54,6 +54,8 @@ public class Launcher {
         print(new 剑指Offer_18_删除链表的节点().deleteNode(head, 8));
 
         print(new 剑指Offer_21_调整数组顺序使奇数位于偶数前面().exchange2(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+
+        print(new 剑指Offer_22_链表中倒数第k个节点().getKthFromEnd2(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 3));
     }
 
     private static <T> void print(T t) {
@@ -66,7 +68,7 @@ public class Launcher {
                 System.out.print(node.val + " --> ");
                 node = node.next;
             }
-            System.out.println("");
+            System.out.println("null");
         } else if (t instanceof char[]) {
             char[] charArray = (char[]) t;
             for (char c : charArray) {
