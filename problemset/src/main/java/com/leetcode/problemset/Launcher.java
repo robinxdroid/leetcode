@@ -57,6 +57,8 @@ public class Launcher {
         print(new 剑指Offer_22_链表中倒数第k个节点().getKthFromEnd2(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 3));
 
         print(new 剑指Offer_24_反转链表().reverseList(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
+
+        print(new 剑指Offer_25_合并两个排序的链表().mergeTwoLists(Utils.arrayToListNode(1, 2, 6, 7, 8, 10), Utils.arrayToListNode(3, 4, 8, 9, 11)));
     }
 
     private static <T> void print(T t) {
