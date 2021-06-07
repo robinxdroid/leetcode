@@ -59,6 +59,9 @@ public class Launcher {
         print(new 剑指Offer_24_反转链表().reverseList(Utils.arrayToListNode(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)));
 
         print(new 剑指Offer_25_合并两个排序的链表().mergeTwoLists(Utils.arrayToListNode(1, 2, 6, 7, 8, 10), Utils.arrayToListNode(3, 4, 8, 9, 11)));
+
+        print(Utils.treefy(1,4,5,10,2,7,6,3,8));
+        print(new 剑指Offer_27_二叉树的镜像().mirrorTree(Utils.treefy(1,4,5,10,2,7,6,3,8)));
     }
 
     private static <T> void print(T t) {
