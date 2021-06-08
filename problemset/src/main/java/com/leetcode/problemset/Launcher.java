@@ -60,8 +60,10 @@ public class Launcher {
 
         print(new 剑指Offer_25_合并两个排序的链表().mergeTwoLists(Utils.arrayToListNode(1, 2, 6, 7, 8, 10), Utils.arrayToListNode(3, 4, 8, 9, 11)));
 
-        print(Utils.treefy(1,4,5,10,2,7,6,3,8));
-        print(new 剑指Offer_27_二叉树的镜像().mirrorTree(Utils.treefy(1,4,5,10,2,7,6,3,8)));
+        print(Utils.treefy(1, 4, 5, 10, 2, 7, 6, 3, 8));
+        print(new 剑指Offer_27_二叉树的镜像().mirrorTree(Utils.treefy(1, 4, 5, 10, 2, 7, 6, 3, 8)));
+
+        print(new 剑指Offer_29_顺时针打印矩阵().spiralOrder(new int[][]{{1, 2, 3, 4, 5, 6}, {7, 8, 9, 10, 11, 12}, {13, 14, 15, 16, 17, 18}, {19, 20, 21, 22, 23, 24}, {25, 26, 27, 28, 29, 30}, {31, 32, 33, 34, 35, 36}}));
     }
 
     private static <T> void print(T t) {
