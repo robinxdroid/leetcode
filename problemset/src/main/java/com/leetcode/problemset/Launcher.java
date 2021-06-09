@@ -64,6 +64,17 @@ public class Launcher {
         print(new 剑指Offer_27_二叉树的镜像().mirrorTree(Utils.treefy(1, 4, 5, 10, 2, 7, 6, 3, 8)));
 
         print(new 剑指Offer_29_顺时针打印矩阵().spiralOrder(new int[][]{{1, 2, 3, 4, 5, 6}, {7, 8, 9, 10, 11, 12}, {13, 14, 15, 16, 17, 18}, {19, 20, 21, 22, 23, 24}, {25, 26, 27, 28, 29, 30}, {31, 32, 33, 34, 35, 36}}));
+
+        剑指Offer_30_包含min函数的栈.MinStack obj = new 剑指Offer_30_包含min函数的栈.MinStack();
+        obj.push(10);
+        obj.push(9);
+        obj.push(8);
+        obj.push(7);
+        obj.push(14);
+        obj.push(11);
+        obj.pop();
+        print(obj.top());
+        print(obj.min());
     }
 
     private static <T> void print(T t) {
