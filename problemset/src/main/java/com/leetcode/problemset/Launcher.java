@@ -75,6 +75,8 @@ public class Launcher {
         obj.pop();
         print(obj.top());
         print(obj.min());
+
+        print(new 剑指Offer_39_数组中出现次数超过一半的数字().majorityElement(new int[]{1, 2, 3, 2, 2, 2, 5, 4, 2}));
     }
 
     private static <T> void print(T t) {
