@@ -42,7 +42,7 @@ public class Launcher {
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{3, 4, 5, 6, 1, 2}));
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
 
-        char[][] chars = new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }};
+        char[][] chars = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         String word = "ABCCED";
         print(new 剑指Offer_12_矩阵中的路径().exist(chars, word));
 
@@ -62,6 +62,11 @@ public class Launcher {
 
         print(Utils.treefy(1, 4, 5, 10, 2, 7, 6, 3, 8));
         print(new 剑指Offer_27_二叉树的镜像().mirrorTree(Utils.treefy(1, 4, 5, 10, 2, 7, 6, 3, 8)));
+
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(2);
+        print("二叉树对称：" + new 剑指Offer_28_对称的二叉树().isSymmetric(root));
 
         print(new 剑指Offer_29_顺时针打印矩阵().spiralOrder(new int[][]{{1, 2, 3, 4, 5, 6}, {7, 8, 9, 10, 11, 12}, {13, 14, 15, 16, 17, 18}, {19, 20, 21, 22, 23, 24}, {25, 26, 27, 28, 29, 30}, {31, 32, 33, 34, 35, 36}}));
 
