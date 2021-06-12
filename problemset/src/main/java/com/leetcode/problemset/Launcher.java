@@ -82,6 +82,8 @@ public class Launcher {
         print(obj.min());
 
         print(new 剑指Offer_39_数组中出现次数超过一半的数字().majorityElement(new int[]{1, 2, 3, 2, 2, 2, 5, 4, 2}));
+
+        print(new 剑指Offer_40_最小的k个数().getLeastNumbers2(new int[]{4, 5, 1, 6, 2, 7, 3, 8}, 4));
     }
 
     private static <T> void print(T t) {
