@@ -86,6 +86,8 @@ public class Launcher {
         print(new 剑指Offer_40_最小的k个数().getLeastNumbers2(new int[]{4, 5, 1, 6, 2, 7, 3, 8}, 4));
 
         print(new 剑指Offer_42_连续子数组的最大和().maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+
+        print(new 剑指Offer_50_第一个只出现一次的字符().firstUniqChar("abaccdeff"));
     }
 
     private static <T> void print(T t) {
