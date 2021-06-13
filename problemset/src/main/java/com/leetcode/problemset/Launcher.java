@@ -42,7 +42,7 @@ public class Launcher {
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{3, 4, 5, 6, 1, 2}));
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
 
-        char[][] chars = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
+        char[][] chars = new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }};
         String word = "ABCCED";
         print(new 剑指Offer_12_矩阵中的路径().exist(chars, word));
 
@@ -84,6 +84,8 @@ public class Launcher {
         print(new 剑指Offer_39_数组中出现次数超过一半的数字().majorityElement(new int[]{1, 2, 3, 2, 2, 2, 5, 4, 2}));
 
         print(new 剑指Offer_40_最小的k个数().getLeastNumbers2(new int[]{4, 5, 1, 6, 2, 7, 3, 8}, 4));
+
+        print(new 剑指Offer_42_连续子数组的最大和().maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 
     private static <T> void print(T t) {
