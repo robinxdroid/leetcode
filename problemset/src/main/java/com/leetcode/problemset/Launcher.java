@@ -88,6 +88,8 @@ public class Launcher {
         print(new 剑指Offer_42_连续子数组的最大和().maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
 
         print(new 剑指Offer_50_第一个只出现一次的字符().firstUniqChar("abaccdeff"));
+
+        print(new 剑指Offer_52_两个链表的第一个公共节点().getIntersectionNode(Utils.arrayToListNode(1, 2, 3, 4, 5, 6), Utils.arrayToListNode(10, 9, 8, 7, 6, 5, 4, 5, 6)));
     }
 
     private static <T> void print(T t) {
