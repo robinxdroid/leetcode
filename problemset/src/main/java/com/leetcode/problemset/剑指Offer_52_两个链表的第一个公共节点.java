@@ -1,8 +1,5 @@
 package com.leetcode.problemset;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 输入两个链表，找出它们的第一个公共节点。
  * <p>
