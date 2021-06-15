@@ -42,7 +42,7 @@ public class Launcher {
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{3, 4, 5, 6, 1, 2}));
         print(new 剑指Offer_11_旋转数组的最小数字().minArray(new int[]{2, 2, 2, 0, 1}));
 
-        char[][] chars = new char[][]{{'A', 'B', 'C', 'E' }, {'S', 'F', 'C', 'S' }, {'A', 'D', 'E', 'E' }};
+        char[][] chars = new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         String word = "ABCCED";
         print(new 剑指Offer_12_矩阵中的路径().exist(chars, word));
 
@@ -90,6 +90,8 @@ public class Launcher {
         print(new 剑指Offer_50_第一个只出现一次的字符().firstUniqChar("abaccdeff"));
 
         print(new 剑指Offer_52_两个链表的第一个公共节点().getIntersectionNode(Utils.arrayToListNode(1, 2, 3, 4, 5, 6), Utils.arrayToListNode(10, 9, 8, 7, 6, 5, 4, 5, 6)));
+
+        print(new 剑指Offer_53_在排序数组中查找数字I().search2(new int[]{1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 7, 8, 9, 10}, 5));
     }
 
     private static <T> void print(T t) {
