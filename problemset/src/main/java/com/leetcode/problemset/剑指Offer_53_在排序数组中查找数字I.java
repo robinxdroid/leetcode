@@ -43,15 +43,21 @@ public class 剑指Offer_53_在排序数组中查找数字I {
         int l = 0, r = nums.length - 1;
         while (l <= r) {
             int mid = (l + r + 1) / 2;
+            // 寻找到左边界
             if (nums[l] == target) {
+                // 寻找到右边界
                 if (nums[r] == target) {
                     return r - l + 1;
                 } else if (nums[mid] == target) {
+                    // 右终点左移，直到找到右边界
                     r--;
                 } else {
+                    // 中位数与目标值不相等，说明目标值位于左区间，修改右终点为中位数，
+                    // 举例：｜1 2 3 ｜4 4 4 4 4 '5' 6 7 8 9 10｜，中位数为5，与目标值4不相等，目标值4肯定位于左区间
                     r = mid - 1;
                 }
             } else if (nums[mid] == target) {
+                // 起始点+1右移，直到找到左边界
                 l++;
             } else if (nums[mid] < target) {
                 l = mid + 1;
