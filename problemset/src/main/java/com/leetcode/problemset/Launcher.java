@@ -92,6 +92,8 @@ public class Launcher {
         print(new 剑指Offer_52_两个链表的第一个公共节点().getIntersectionNode(Utils.arrayToListNode(1, 2, 3, 4, 5, 6), Utils.arrayToListNode(10, 9, 8, 7, 6, 5, 4, 5, 6)));
 
         print(new 剑指Offer_53_在排序数组中查找数字I().search2(new int[]{1, 2, 3, 4, 5, 5, 5, 5, 5, 5, 6, 7, 8, 9, 10}, 5));
+
+        print(new 剑指Offer_53_0至n减1中缺失的数字().missingNumber(new int[]{0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}));
     }
 
     private static <T> void print(T t) {
