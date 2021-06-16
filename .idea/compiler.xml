@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="leetcode.app" target="1.8" />
+      <module name="leetcode.problemset" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
