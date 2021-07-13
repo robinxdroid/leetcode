@@ -24,6 +24,8 @@ public class 剑指Offer_24_反转链表 {
             ListNode next = point.next;
             // 改变当前节点的下一个节点指向为前一个节点
             point.next = prePoint;
+
+            // 移动两个指针
             // 改变前一个节点指向当前节点
             prePoint = point;
             // 改变当前节点指向为下一个节点
@@ -41,7 +43,7 @@ public class 剑指Offer_24_反转链表 {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode newHead = reverseList(head.next);
+        ListNode newHead = reverseList2(head.next);
         head.next.next = head;
         head.next = null;
         return newHead;
