@@ -4,20 +4,47 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/algorithm" />
+            <option value="$PROJECT_DIR$/algorithm/01-排序" />
+            <option value="$PROJECT_DIR$/algorithm/02-并查集" />
+            <option value="$PROJECT_DIR$/algorithm/03-图" />
+            <option value="$PROJECT_DIR$/algorithm/04-递归" />
+            <option value="$PROJECT_DIR$/algorithm/05-回溯" />
+            <option value="$PROJECT_DIR$/algorithm/06-贪心" />
+            <option value="$PROJECT_DIR$/algorithm/07-分治" />
+            <option value="$PROJECT_DIR$/algorithm/08-动态规划" />
+            <option value="$PROJECT_DIR$/algorithm/09-布隆过滤器" />
+            <option value="$PROJECT_DIR$/algorithm/10-跳表" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/data_structure" />
+            <option value="$PROJECT_DIR$/data_structure/00-leetcode" />
+            <option value="$PROJECT_DIR$/data_structure/01-复杂度" />
+            <option value="$PROJECT_DIR$/data_structure/02-动态数组" />
+            <option value="$PROJECT_DIR$/data_structure/03-链表" />
+            <option value="$PROJECT_DIR$/data_structure/04-栈" />
+            <option value="$PROJECT_DIR$/data_structure/05-队列" />
+            <option value="$PROJECT_DIR$/data_structure/06-二叉搜索树" />
+            <option value="$PROJECT_DIR$/data_structure/06-二叉搜索树2" />
+            <option value="$PROJECT_DIR$/data_structure/07-AVL树" />
+            <option value="$PROJECT_DIR$/data_structure/08-红黑树" />
+            <option value="$PROJECT_DIR$/data_structure/09-集合" />
+            <option value="$PROJECT_DIR$/data_structure/10-映射" />
+            <option value="$PROJECT_DIR$/data_structure/11-哈希表" />
+            <option value="$PROJECT_DIR$/data_structure/12-堆" />
+            <option value="$PROJECT_DIR$/data_structure/13-优先级队列" />
+            <option value="$PROJECT_DIR$/data_structure/14-Trie" />
+            <option value="$PROJECT_DIR$/data_structure/15-二叉树的非递归遍历" />
             <option value="$PROJECT_DIR$/leetcode" />
             <option value="$PROJECT_DIR$/problemset" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>
