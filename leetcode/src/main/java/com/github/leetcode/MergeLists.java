@@ -11,6 +11,7 @@ public class MergeLists {
         }
     }
 
+    // 允许连续重复元素出现的次数，也是重复检测map池的数量
     public static final int dumplicateItemCheckPoolSize = 20;
 
     public static List<String> mergeLists(List<String>... lists) {
@@ -23,6 +24,7 @@ public class MergeLists {
         for (int i = 0; i < dumplicateItemCheckPoolSize; i++) {
             mapList.add(new HashMap<String, Node>());
         }
+
         // 遍历所有列表，将元素逐个添加到双向链表中
         for (List<String> sublist : lists) {
             int preIndex = -1;
@@ -35,6 +37,7 @@ public class MergeLists {
 
                 // 检查当前元素是否已经存在于链表中
                 for (Map<String, Node> map : mapList) {
+                    // 遍历每个重复子map中是否存在重复项，当前map中根据上下文没有匹配上重复项，就继续匹配下一个map，直到匹配上为止
                     Map<String, Node> targetMap = map;
                     boolean contains = targetMap.containsKey(ch);
                     if (contains) {
@@ -102,6 +105,7 @@ public class MergeLists {
                     }
 
                     if (allow == false) {
+                        // 根据上下文对比匹配到了重复项，跳出mapList重复项检索逻辑
                         break;
                     }
                 }
@@ -137,7 +141,7 @@ public class MergeLists {
     }
 
     public static void main(String[] args) {
-        List<String> originalList = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "H", "I", "J", "J", "K","L","L","L","M","M","M","M");
+        List<String> originalList = Arrays.asList("A", "B", "C", "D", "E", "F", "G", "H", "H", "I", "J", "J", "K", "L", "L", "L", "M", "M", "M", "M");
 
         List<String> sublist1 = Arrays.asList("A", "B", "C", "D", "E");
         List<String> sublist2 = Arrays.asList("B", "C", "D", "E", "F");
@@ -145,7 +149,7 @@ public class MergeLists {
         List<String> sublist4 = Arrays.asList("D", "E", "F", "G", "H");
         List<String> sublist5 = Arrays.asList("H", "I", "J", "J", "K");
         List<String> sublist6 = Arrays.asList("J", "J", "K", "L");
-        List<String> sublist7 = Arrays.asList( "K", "L");
+        List<String> sublist7 = Arrays.asList("K", "L");
 //        List<String> sublist7 = Collections.singletonList("K");
         List<String> sublist8 = Arrays.asList("K", "L", "L");
         List<String> sublist9 = Arrays.asList("L", "L", "M", "M");
