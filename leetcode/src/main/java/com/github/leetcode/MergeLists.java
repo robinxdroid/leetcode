@@ -154,8 +154,10 @@ public class MergeLists {
         List<String> sublist8 = Arrays.asList("K", "L", "L");
         List<String> sublist9 = Arrays.asList("L", "L", "M", "M");
         List<String> sublist10 = Arrays.asList("M", "M", "M");
+        long startTime = System.currentTimeMillis();
         List<String> mergedList = mergeLists(sublist1, sublist2, sublist3, sublist4, sublist5, sublist6, sublist7, sublist8, sublist9, sublist10);
 
         System.out.println("Merged List: " + mergedList);
+        System.out.println("耗时: " + (System.currentTimeMillis() - startTime) + "毫秒");
     }
 }
