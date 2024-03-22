@@ -12,7 +12,7 @@ public class MergeLists {
     }
 
     // 允许连续重复元素出现的次数，也是重复检测map池的数量
-    public static final int dumplicateItemCheckPoolSize = 20;
+    public static final int duplicateItemCheckPoolSize = 20;
 
     public static List<String> mergeLists(Node head, List<String>... lists) {
 
@@ -20,7 +20,7 @@ public class MergeLists {
 
         // 创建映射以跟踪每个元素的前一个和后一个元素
         List<Map<String, Node>> mapList = new ArrayList<>();
-        for (int i = 0; i < dumplicateItemCheckPoolSize; i++) {
+        for (int i = 0; i < duplicateItemCheckPoolSize; i++) {
             mapList.add(new HashMap<String, Node>());
         }
 
@@ -259,12 +259,14 @@ public class MergeLists {
         List<String> sublist11 = Arrays.asList("M", "N", "O", "P");
         List<String> sublist12 = Arrays.asList("P", "P", "P", "P");
         List<String> sublist13 = Arrays.asList("P", "Q", "R", "S");
+
         List<String> sublist14 = Arrays.asList("H", "I", "J", "J", "K", "L");
+        List<String> sublist15 = Arrays.asList("C", "D", "E", "F", "G", "H");
         long startTime = System.currentTimeMillis();
 
         // 创建双向链表的头节点
         Node head = new Node("\0");
-        List<String> mergedList = mergeLists(head, sublist1, sublist2, sublist3, sublist4, sublist5, sublist6, sublist7, sublist8, sublist9, sublist10, sublist11, sublist12, sublist13, sublist14);
+        List<String> mergedList = mergeLists(head, sublist1, sublist2, sublist3, sublist4, sublist5, sublist6, sublist7, sublist8, sublist9, sublist10, sublist11, sublist12, sublist13, sublist14, sublist15);
 
         System.out.println("Merged List: " + mergedList);
         System.out.println("耗时: " + (System.currentTimeMillis() - startTime) + "毫秒");
