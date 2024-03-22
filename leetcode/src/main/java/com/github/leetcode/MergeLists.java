@@ -200,31 +200,10 @@ public class MergeLists {
             return true;
         }
         boolean duplicate = false;
-        String preItem = sublist.get(preIndex);
 
-        /*String nextItem = sublist.get(nextIndex);
-        // 需要比pre next
-        if (mapItem.prev != null && mapItem.next != null) {
-            if (preItem.equals(mapItem.prev.value) &&
-                    nextItem.equals(mapItem.next.value)) {
-                duplicate = true;
-            }
-        } else if (mapItem.prev != null) {
-            if (preItem.equals(mapItem.prev.value)) {
-                duplicate = true;
-            }
-        } else if (mapItem.next != null) {
-            if (nextItem.equals(mapItem.next.value)) {
-                duplicate = true;
-            }
-        } else {
-            // pre没比上，next也没比上，一般subList只包含一个元素，且在map中有重复项
-            // 这种情况暂时，归类为重复，因为没有上下文，不好界定是否真的是重复元素，先这么处理
-            duplicate = true;
-        }*/
-
-        if (preIndex >= 0) {
-            if (nextIndex < sublist.size()) {
+        if (preIndex >= 0 && preIndex < sublist.size()) {
+            String preItem = sublist.get(preIndex);
+            if (nextIndex >= 0 && nextIndex < sublist.size()) {
                 String nextItem = sublist.get(nextIndex);
                 // 需要比pre next
                 if (mapItem.prev != null && mapItem.next != null) {
@@ -247,7 +226,7 @@ public class MergeLists {
             }
         } else {
             // 只比next
-            if (nextIndex < sublist.size()) {
+            if (nextIndex >= 0 && nextIndex < sublist.size()) {
                 String nextItem = sublist.get(nextIndex);
                 if (mapItem.next != null) {
                     duplicate = nextItem.equals(mapItem.next.value);
